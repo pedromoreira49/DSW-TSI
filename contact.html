@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<title>DSW - Sem01</title>
+</head>
+
+	<header>
+		<div class="container">
+			<div class="myLogo"><i class="fa fa-code-fork" aria-hidden="true"></i> Portfolio</div>
+			<nav class="menu-desktop">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="">Project</a></li>
+					<li class="selected"><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+			<div class="clear"></div>
+		</div>
+	</header>
+	<section class="main-bg">
+		<div class="overlay"></div>
+		<div class="container">
+			<h2>Hey, I'm Pedro ;)</h2>
+			<p>I'm fullstack developer certified for Carrefour Bank.</p>
+			<p>The innovation for create products and companies is my passion.</p>
+		</div>
+	</section>
+	<section class="contact">
+		<div class="container">
+			<div class="w50 center">
+				<h2>Contact me:</h2>
+				<p>Contact me for project ideas or innovation products.</p>
+				<p>Make your dream come true ;)</p>
+			</div>
+			<div class="w50 center">
+				<form class="myForm">
+					<label>Name: <r>*</r>
+						<input id="name" type="text" name="name" placeholder="Type your name" required oninvalid="this.setCustomValidity('Seu nome aqui')">
+					</label>
+					<label>Email: <r>*</r>
+						<input type="email" name="email" placeholder="Your best email" required>
+					</label>
+					<label>Phone: <r>*</r>
+						<input type="tel" name="tel" placeholder="Type your contact phone" pattern="[0-9]{7}-[0-9]{4}" required>
+					</label>
+					<label>Subject: <r>*</r>
+						<input list="nav" name="assunto" placeholder="About what you want to talk?" required>
+						<datalist id="nav">
+							<option value="Suggestion">
+							<option value="Project">
+							<option value="Article">
+							<option value="Reserch">
+							<option value="Foundation">
+						</datalist>
+					</label>
+					<label>Message: <r>*</r>
+						<textarea placeholder="Your message here..." wrap required></textarea>
+					</label>
+					<input type="submit" name="action" value="Send" onclick="setStorage()">
+				</form>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</section>
+	<footer class="myFooter">
+		<div class="container">
+			<div class="w50">
+				<h2>My social webs:</h2>
+				<p><i class="fa fa-github" aria-hidden="true"></i><a href="https://github.com/pedromoreira49"> Github</a></p>
+				<p><i class="fa fa-linkedin" aria-hidden="true"></i><a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-stone-moreira-995bb0232/"> Linkedin</a></p>
+				<p><i class="fa fa-envelope" aria-hidden="true"></i> jpedrostonemoreira@gmail.com</a></p>
+			</div>
+			<div id="div1" class="w50 drag" ondrop="soltar(event)" ondragover="permiteSoltar(event)">
+			</div>
+		</div>
+		<div class="clear"></div>
+	</footer>
+	<footer class="mySecondFooter">
+		<div class="container">
+			<div class="w50 center">
+				<p>© 2022 Pedro Moreira</p>
+			</div>
+			<div class="w50 center">
+				<p>Build with HTML & CSS</p>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</footer>
+	<script type="text/javascript" src="js/dragDrop.js"></script>
+	<script type="text/javascript" src="js/setLocalStorage.js"></script>
+	<script type="text/javascript">
+		var name = localStorage.getItem("nome");
+		var retrieve = document.getElementById("name").value = name;
+	</script>
+</html>
