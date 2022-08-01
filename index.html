@@ -21,6 +21,14 @@
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
+			<nav class="menu-mobile">
+				<h2><i class="fa fa-bars" aria-hidden="true"></i></h2>
+				<ul>
+					<li class="selected"><a href="index.html">Home</a></li>
+					<li><a href="">Project</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
 			<div class="clear"></div>
 		</div>
 	</header>
@@ -113,5 +121,11 @@
 		</div>
 		<div class="clear"></div>
 	</footer>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$('nav.menu-mobile h2').click(function(){
+			$('nav.menu-mobile ul').slideToggle();
+		});
+	</script>
 </body>
 </html>
