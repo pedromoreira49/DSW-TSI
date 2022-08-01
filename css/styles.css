@@ -24,6 +24,40 @@ header{
 	font-size: 23px;
 }
 
+.menu-mobile{
+	display: none;
+	float: right;
+}
+
+.menu-mobile h2{
+	cursor: pointer;
+}
+
+.menu-mobile ul{
+	display: none;
+	width: 100%;
+	background-color: white;
+	position: absolute;
+	left: 0;
+	top: 50px;
+	z-index: 999;
+	text-align: center;
+}
+
+.menu-mobile li{
+	padding: 8px 0;
+	border-bottom: 1px solid black;
+}
+
+.menu-mobile a{
+	color: black;
+	text-decoration: none;
+}
+
+.menu-mobile li.selected{
+	background: rgb(255, 255, 255);
+}
+
 .menu-desktop{float: right;}
 
 .selected{font-weight: bold;}
@@ -279,5 +313,15 @@ section.contact form{
 
 	.sobre{
 		width: 100%;
+	}
+}
+
+@media screen and (max-width: 500px){
+	nav.menu-desktop{
+		display: none;
+	}
+
+	nav.menu-mobile{
+		display: block;
 	}
 }
